@@ -1,0 +1,35 @@
+
+
+
+#GRAPHQL
+
+POST /graphql
+
+
+
+query - get
+
+mutation - put/post/delete
+
+{
+    mutation updateUser {                  ----nome que está no frontend
+        updateUser(id: 1) {                ----nome que está no backend
+            nome: "Diego"
+        }
+    } 
+}
+
+
+na mesma requisição pro back-end de alterar o usuário também pode realizar uma query, exemplo:
+
+{
+    mutation updateUser {                  ----nome que está no frontend
+        updateUser(id: 1) {                ----nome que está no backend
+            nome: "Diego"
+        }
+    } 
+
+    query users {
+
+    }
+}
